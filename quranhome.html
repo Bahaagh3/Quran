@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="القران الكريم, قراءة واستماع">
+    <link rel="stylesheet" href="quranhome.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="quranhome.html">الصفحة الرئيسية</a>
+                <a href="listen.html">الأستماع للقران</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class = images>
+            <div class="background-wrapper"></div>
+            <img src="imagequ.png" alt="Error 404" class="image-imageInmiddel">
+            
+        </section>
+        <section class="middel-of-page">
+        <div class="container">          
+
+        </div>
+    </section>
+        <footer>
+            <hr class="footLine">
+            <p>القران الكريم</p>
+        </footer>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://api.alquran.cloud/v1/meta')
+                .then(response => response.json())
+                .then(data => {
+                    const surahs = data.data.surahs.references;
+                    const container = document.querySelector('.container');
+    
+                    surahs.forEach(surah => {
+                        const surahElement = `
+                            <a href="surah_page.html?surah=${surah.number}" class="outerLayer">
+                                <div class="surah" id="${surah.number}">
+                                    <div class="SurahPreviewRow_container">
+                                        <div class="SurahPreviewRowContainer_right">
+                                            <div class="SurahPreview_surahNumber">
+                                                <span class="number">${surah.number}</span>
+                                            </div>
+                                            <div class="ChapterNameImageContainer">${surah.name}</div>
+                                        </div>
+                                        <div class="SurahPreviewRow_left">${surah.numberOfAyahs} آيات</div>
+                                    </div>
+                                </div>
+                            </a>
+                        `;
+                        container.innerHTML += surahElement;
+                    });
+                })
+                .catch(error => console.error('Error fetching Surah data:', error));
+        });
+    </script>
+    
+</body>
+</html>

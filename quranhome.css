@@ -1,0 +1,139 @@
+
+header {
+    
+    background-color: rgb(52,58,64);
+    color: white;
+    text-align: right;
+    padding: 1em;
+}
+
+
+nav ul a{
+    
+    color: white;
+    text-decoration: none;
+}
+
+nav ul a[href="listen.html"]{
+    margin-right: 15px;
+}
+
+body {
+    margin: 0; /*so the html streches fully*/
+}
+
+.images {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.background-wrapper {
+    background-image: url("background_image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.image-imageInmiddel{
+    max-width: 400px; /* Here you can adjust the size bubu */
+    align-self: center; /* Center the image in the flex container bubu */
+    filter: brightness(0.9);
+    
+}
+.middel-of-page{
+    background-color: rgb(52,58,64);
+    align-items: center;
+    text-align:center;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 370px); /* Adjust the number of columns and their width */
+    grid-gap: 3px; /* Adjust the gap between grid items */
+    padding: 10px; /* Padding around the grid container */
+    justify-content: center;
+    direction: rtl; /* Sets the direction to right-to-left */
+    
+}
+
+.surah {
+    background-color: transparent;
+    color: white; /* text color */
+    padding: 27px;
+    margin: 10px;
+    border-radius: 5px; /* for rounded corners */
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* optional for a subtle shadow */
+    
+    
+    
+  }
+  .SurahPreviewRow_container {
+    position: relative; /* Needed to position the surah number absolutely within this container */
+    
+}
+
+.SurahPreview_surahNumber {
+    position: absolute; /* Positioning it absolutely within SurahPreviewRow_container */
+    right: 4px; /* Adjust as needed to position on the right */
+    top: 50%; /* Centering it vertically */
+    transform: translate(50%, -50%) rotate(45deg); /* Adjusting for centering and rotating to create a diamond shape */
+    color: white; /* White text color */
+    text-decoration: none; /* Removing text decoration */
+    width: 30px; /* Width of the diamond */
+    height: 30px; /* Height of the diamond */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em; /* Adjust the font size as needed */
+    border: 2px solid white; /* White border */
+}
+
+.SurahPreview_surahNumber .number {
+    display: block; /* Making the span a block element */
+    transform: rotate(-45deg); /* Counter-rotating the number */
+    font-weight: bold;
+    
+}
+
+.ChapterNameImageContainer{
+    position: absolute;
+    right: 36px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    top: 50%; /* Aligning to the middle vertically */
+    transform: translateY(-50%); /* Shifting up to truly center vertically */
+}
+.SurahPreviewRow_left{
+    position: absolute;
+    left: 0px;
+    text-decoration: none;
+    color: white;
+    font-weight: small;
+    top: 50%; /* Aligning to the middle vertically */
+    transform: translateY(-50%); /* Shifting up to truly center vertically */
+}
+
+.footLine {
+    width: 1390px; /* set the desired length of the line */
+  }
+footer {
+    
+    background-color: rgb(52,58,64);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
