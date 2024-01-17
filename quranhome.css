@@ -65,11 +65,26 @@ body {
     font-size: 50px;
 }
 
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 50%; 
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #ddd;
+    text-align: right;
+}
+
+
 .middel-of-page{
     margin-top: 30px;
     align-items: center;
     text-align:center;
 }
+
 
 
 

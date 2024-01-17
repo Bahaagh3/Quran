@@ -29,6 +29,9 @@
             <p class="aa">موقع ثثثثث يتيح لك قراءة القران والاستماع له</p>
             <hr class="footLine">
         </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="بحث عن سورة..." onkeyup="searchSurah()">
+        </div>
         <section class="middel-of-page">
         <div class="container">          
 
@@ -69,6 +72,29 @@
                 })
                 .catch(error => console.error('Error fetching Surah data:', error));
         });
+    </script>
+
+    <script>
+    function searchSurah() {
+        let input, filter, container, surahs, title, i, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        container = document.querySelector('.container');
+        surahs = container.getElementsByClassName('outerLayer');
+
+        for (i = 0; i < surahs.length; i++) {
+            title = surahs[i].getElementsByClassName("ChapterNameImageContainer")[0];
+            if (title) {
+                txtValue = title.textContent || title.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    surahs[i].style.display = "";
+                } else {
+                    surahs[i].style.display = "none";
+                }
+            }       
+        }
+}
+
     </script>
     
 </body>
