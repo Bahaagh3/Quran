@@ -1,3 +1,5 @@
+
+
 header {
     
   background-color: rgb(52,58,64);
@@ -16,6 +18,37 @@ nav ul a{
 nav ul a[href="reciters.html"]{
   margin-right: 15px;
 }
+
+.name-sec{
+  text-align: center;
+    display: flex; 
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 200px; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.name-sec .surahName {
+  font-size: 30px; 
+  color: white; 
+  width: 100%; /* Full width */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.name-sec img {
+  
+  max-width: 100%; /* Ensures the image is not larger than its container */
+  height: auto; /* Keeps the image aspect ratio */
+  max-width: 400px;
+  align-items: center;
+  
+}
+
 
 body{
     background-color: rgb(52, 58, 64);
