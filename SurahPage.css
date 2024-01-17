@@ -48,13 +48,13 @@ body{
   
   /* The navigation menu links */
   .sidenav a {
-    padding-left: 20px;
     text-decoration: none;
     font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
-    font-family: "quran", sans-serif;   
+    font-family: "quran", sans-serif;  
+    text-align: center; 
 
   }
   
