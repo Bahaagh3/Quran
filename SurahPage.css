@@ -1,0 +1,4 @@
+.con{
+    display: grid;
+    grid-template-columns: 150px
+}
