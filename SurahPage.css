@@ -1,4 +1,14 @@
 .con{
+    font-family: 'Noto Sans Arabic', sans-serif;
     display: grid;
-    grid-template-columns: 150px
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+.ayah{
+    text-align: center;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+.ayahinfo{
+
 }
