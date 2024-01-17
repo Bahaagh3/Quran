@@ -1,14 +1,80 @@
+body{
+    background-color: rgb(52, 58, 64);
+}
+@font-face {
+    font-family: 'quran'; 
+    src: url('Fonts/Nabi.ttf') format('truetype');
+  }
 .con{
-    font-family: 'Noto Sans Arabic', sans-serif;
+    font-family: "quran", sans-serif;   
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1100px;
     justify-content: center;
 }
 .ayah{
-    text-align: center;
+    font-size: 20px;
+    text-align: right;
     margin: 20px 0px;
-    font-weight: bold;
+    padding:0px 20px;
+    padding-top: 20px;
+    color: #d4d4d4;
+    background-color: rgb(53, 57, 60);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
 }
 .ayahinfo{
-
+    font-size: 20px;
+    color: gray;
 }
+.page{
+    display: flex;
+    background-color: aqua;
+}
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(39, 44, 49); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: "quran", sans-serif;   
+
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smalle
