@@ -48,7 +48,6 @@ body{
 }
 .page{
     display: flex;
-    background-color: aqua;
 }
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -98,4 +97,18 @@ body{
     padding: 20px;
   }
   
-  /* On smalle
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(52, 58, 64);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+\::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
