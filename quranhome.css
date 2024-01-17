@@ -20,6 +20,7 @@ nav ul a[href="listen.html"]{
 
 body {
     margin: 0; /*so the html streches fully*/
+    background-color: rgb(52,58,64);
 }
 
 .images {
@@ -30,6 +31,7 @@ body {
     align-items: center;
     color: white;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .background-wrapper {
@@ -51,11 +53,24 @@ body {
     filter: brightness(0.9);
     
 }
+
+.between-the-middel-top{    
+    align-items: center;
+    text-align:center;
+    color: white;   
+}
+
+.ww{ 
+    font-weight: bold; 
+    font-size: 50px;
+}
+
 .middel-of-page{
-    background-color: rgb(52,58,64);
+    margin-top: 30px;
     align-items: center;
     text-align:center;
 }
+
 
 
 .container{
@@ -74,13 +89,30 @@ body {
     padding: 27px;
     margin: 10px;
     border-radius: 5px; /* for rounded corners */
-    border: 1px solid white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* optional for a subtle shadow */
-    
-    
-    
+    border: 1.5px solid white;
+    box-shadow: 0 0 10px rgba(1, 1, 0, 1); /* optional for a subtle shadow */
+ 
   }
-  .SurahPreviewRow_container {
+
+.surah:hover {
+    border-color: rgb(70, 70, 243);
+    filter: brightness(0.8);
+  }  
+.surah:hover .SurahPreview_surahNumber{
+    border-color: rgb(70, 70, 243);
+    background-color: rgb(70, 70, 243);
+    color: black;
+  } 
+
+  .surah:active{
+    opacity: 0.3;
+}
+.surah:active .SurahPreview_surahNumber{
+    opacity: 0.3;
+}
+
+
+.SurahPreviewRow_container {
     position: relative; /* Needed to position the surah number absolutely within this container */
     
 }
