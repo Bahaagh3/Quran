@@ -12,9 +12,16 @@ function openNav() {
   }
 let surahId = getQueryParam('surah');
 if (surahId == null){
-    surahId =1
+    surahId ="1"
+}
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
 }
 
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 let test = new Request('https://api.quran.com/api/v4/quran/verses/uthmani?chapter_number='+surahId)
 fetch(test)
 .then(response => {
@@ -25,19 +32,10 @@ fetch(test)
   })
 .then(data => {
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
 const verses = data["verses"]; 
 let parent = document.getElementById("0")
-console.log(verses)
 for (let i = 0; i<verses.length;i++){
-    let content = verses[i]["text_uthmani"]//.replaceAll("","").replaceAll("","").replaceAll("","").replaceAll("","")
+    let content = verses[i]["text_uthmani"]
     let key  = verses[i]["verse_key"]
     let newDiv = document.createElement("div")
     newDiv.className = "ayah"
@@ -60,6 +58,10 @@ fetch('https://api.alquran.cloud/v1/meta')
             surahElement.href = "SurahPage.html?surah="+surah.number
             surahElement.textContent = surah.name
             container.appendChild(surahElement)
+            if (surah.number == surahId){
+              let temp = document.getElementById("name")
+              temp.textContent = surah.name
+            }
         });
     })
     .catch(error => console.error('Error fetching Surah data:', error));
